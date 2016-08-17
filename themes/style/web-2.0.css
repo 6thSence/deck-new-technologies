@@ -75,7 +75,7 @@ select, input, textarea, button {
 }
 
 pre, code, kbd, samp {
-  font-family: monospace, sans-serif;
+  font-family: SourceSansProRegular, Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -215,12 +215,12 @@ h1, .vcenter {
 }
 
 h2 {
-  font-size: 2.25em;
-  font-weight: bold;
   padding-top: .5em;
   margin: 0 0 .66666em 0;
   border-bottom: 3px solid #888;
-}
+  font: 2.7em/1.2 SourceSansProLight, Helvetica, Arial, sans-serif;
+
+  }
 
 h3 {
   font-size: 1.4375em;
@@ -245,7 +245,11 @@ h6 {
   font-weight: bold;
 }
 
-img, iframe, video {
+img, iframe, video, svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   max-width: 100%;
 }
@@ -274,15 +278,17 @@ em {
 li {
   padding: .25em 0;
   vertical-align: middle;
+  font: 2.25em/1.2 SourceSansProLight, Helvetica, Arial, sans-serif;
 }
+
 li > ol, li > ul {
   margin-bottom: inherit;
 }
 
 .deck-container {
-  font-size: 16px;
+  font-size: 32px;
   line-height: 1.25;
-  color: #444;
+  color: #fff;
 }
 
 .slide {
@@ -291,16 +297,40 @@ li > ol, li > ul {
   width: 100%;
 }
 
+.slide._black {
+  background: #222;
+  }
+
+.slide._gray {
+  background: #ddd;
+  }
+
+.slide._blue {
+  background: #81add8;
+  }
+
+.slide._gray * {
+  color: #222;
+  }
+
+.slide._green {
+  background: #586;
+  }
+
+.slide._red {
+  background: #b54;
+  }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: SourceSansProRegular, Helvetica, Arial, sans-serif;
 }
 
 h1 {
-  color: #08455f;
+  color: #fff;
 }
 
 h2 {
-  color: #0b7495;
+  color: #fff;
   border-bottom: 0;
 }
 .cssreflections h2 {
@@ -310,7 +340,7 @@ h2 {
 }
 
 h3 {
-  color: #000;
+  color: #fff;
 }
 
 pre {
@@ -359,7 +389,7 @@ code {
 }
 
 blockquote {
-  font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: SourceSansProRegular, Helvetica, Arial, sans-serif;
   font-size: 2em;
   padding: 1em 2em .5em 2em;
   color: #000;
@@ -430,25 +460,10 @@ a:hover, a:focus {
 }
 
 .deck-container {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-family: SourceSansProRegular, Helvetica, Arial, sans-serif;
   font-size: 1.75em;
-  background: #f4fafe;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #f4fafe 0%, #ccf0f0 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4fafe), color-stop(100%, #ccf0f0));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #f4fafe 0%, #ccf0f0 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #f4fafe 0%, #ccf0f0 100%);
-  /* Opera11.10+ */
-  background: -ms-linear-gradient(top, #f4fafe 0%, #ccf0f0 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #f4fafe 0%, #ccf0f0 100%);
-  /* W3C */
-  background-attachment: fixed;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
+
 .deck-container > .slide {
   padding: 0 48px;
 }
